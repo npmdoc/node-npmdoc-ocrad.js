@@ -1,0 +1,803 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/antimatter15/ocrad.js">ocrad.js (v0.0.1)</a>
+</h1>
+<h4>OCR in JavaScript</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ocrad.js">module ocrad.js</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ocrad.js.js">
+            function <span class="apidocSignatureSpan">ocrad.</span>js
+            <span class="apidocSignatureSpan">(image)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ocrad.js.close">
+            function <span class="apidocSignatureSpan">ocrad.js.</span>close
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ocrad.js.get_errno">
+            function <span class="apidocSignatureSpan">ocrad.js.</span>get_errno
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ocrad.js.open">
+            function <span class="apidocSignatureSpan">ocrad.js.</span>open
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ocrad.js.recognize">
+            function <span class="apidocSignatureSpan">ocrad.js.</span>recognize
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ocrad.js.result_blocks">
+            function <span class="apidocSignatureSpan">ocrad.js.</span>result_blocks
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ocrad.js.result_chars_block">
+            function <span class="apidocSignatureSpan">ocrad.js.</span>result_chars_block
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ocrad.js.result_chars_line">
+            function <span class="apidocSignatureSpan">ocrad.js.</span>result_chars_line
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ocrad.js.result_chars_total">
+            function <span class="apidocSignatureSpan">ocrad.js.</span>result_chars_total
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ocrad.js.result_first_character">
+            function <span class="apidocSignatureSpan">ocrad.js.</span>result_first_character
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ocrad.js.result_line">
+            function <span class="apidocSignatureSpan">ocrad.js.</span>result_line
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ocrad.js.result_lines">
+            function <span class="apidocSignatureSpan">ocrad.js.</span>result_lines
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ocrad.js.scale">
+            function <span class="apidocSignatureSpan">ocrad.js.</span>scale
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ocrad.js.set_exportfile">
+            function <span class="apidocSignatureSpan">ocrad.js.</span>set_exportfile
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ocrad.js.set_image">
+            function <span class="apidocSignatureSpan">ocrad.js.</span>set_image
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ocrad.js.set_image_from_file">
+            function <span class="apidocSignatureSpan">ocrad.js.</span>set_image_from_file
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ocrad.js.set_threshold">
+            function <span class="apidocSignatureSpan">ocrad.js.</span>set_threshold
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ocrad.js.set_utf8_format">
+            function <span class="apidocSignatureSpan">ocrad.js.</span>set_utf8_format
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ocrad.js.version">
+            function <span class="apidocSignatureSpan">ocrad.js.</span>version
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ocrad.js.write_file">
+            function <span class="apidocSignatureSpan">ocrad.js.</span>write_file
+            <span class="apidocSignatureSpan">(filename, arr)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ocrad.js" id="apidoc.module.ocrad.js">module ocrad.js</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ocrad.js.js" id="apidoc.element.ocrad.js.js">
+        function <span class="apidocSignatureSpan">ocrad.</span>js
+        <span class="apidocSignatureSpan">(image)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">js = function (image){
+  if(image.getContext) image = image.getContext('2d');
+  if(image.getImageData) image = image.getImageData(0, 0, image.canvas.width, image.canvas.height);
+  if(image.data){
+    var width = image.width, height = image.height;
+    var header = "P5\n" + width + " " + height + "\n255\n";
+    var dst = new Uint8Array(header.length + width * height);
+    var src = image.data;
+    var srcLength = src.length | 0, srcLength_16 = (srcLength - 16) | 0;
+    var j = header.length;
+    for(var i = 0; i &lt; j; i++){
+      dst[i] = header.charCodeAt(i) // write the header
+    }
+    var coeff_r = 4899, coeff_g = 9617, coeff_b = 1868;
+    for (var i = 0; i &lt;= srcLength_16; i += 16, j += 4) {
+      dst[j]     = (src[i] * coeff_r + src[i+1] * coeff_g + src[i+2] * coeff_b + 8192) &gt;&gt; 14;
+      dst[j + 1] = (src[i+4] * coeff_r + src[i+5] * coeff_g + src[i+6] * coeff_b + 8192) &gt;&gt; 14;
+      dst[j + 2] = (src[i+8] * coeff_r + src[i+9] * coeff_g + src[i+10] * coeff_b + 8192) &gt;&gt; 14;
+      dst[j + 3] = (src[i+12] * coeff_r + src[i+13] * coeff_g + src[i+14] * coeff_b + 8192) &gt;&gt; 14;
+    }
+    for (; i &lt; srcLength; i += 4, ++j) {
+      dst[j] = (src[i] * coeff_r + src[i+1] * coeff_g + src[i+2] * coeff_b + 8192) &gt;&gt; 14;
+    }
+    image = dst;
+  }
+  if(image instanceof ArrayBuffer) image = new Uint8Array(image);
+  OCRAD.write_file('/in.pnm', image);
+  var desc = OCRAD.open();
+  OCRAD.set_image_from_file(desc, 'in.pnm', 0);
+  OCRAD.set_utf8_format(desc, 1);
+  OCRAD.recognize(desc, 0)
+  var text = '';
+  var block_count = OCRAD.result_blocks(desc);
+
+  for(var i = 0; i &lt; block_count; i++){
+    var line_count = OCRAD.result_lines(desc, i);
+    for(var j = 0; j &lt; line_count; j++){
+      var line = OCRAD.result_line(desc, i, j);
+      text += line;
+    }
+  }
+  OCRAD.close(desc)
+  return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ocrad.js.close" id="apidoc.element.ocrad.js.close">
+        function <span class="apidocSignatureSpan">ocrad.js.</span>close
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">close = function () {
+  return ccallFunc(func, returnType, argTypes, Array.prototype.slice.call(arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			&lt;div class="content"&gt;
+				Ocrad.js also &lt;strong&gt;exposes all&lt;/strong&gt; of the &lt;a href="http://www.gnu.org/software/ocrad/manual
+/ocrad_manual.html#Library-functions"&gt;C library functions&lt;/a&gt; in addition to the extremely simple high level
+ API covered in the last section. By calling &lt;tt&gt;OCRAD.version()&lt;/tt&gt; you can find the current version string
+: &lt;tt&gt;0.23-pre1&lt;/tt&gt;, the latest pre-release version of the software available.
+
+				&lt;div style="padding: 20px; font-family: monospace"&gt;
+					&lt;i&gt;string&lt;/i&gt; OCRAD.version()&lt;br&gt;
+					&lt;i&gt;void&lt;/i&gt; OCRAD.write_file(&lt;i&gt;string&lt;/i&gt; filename, &lt;i&gt;Uint8Array&lt;/
+i&gt; PBM Image Data)&lt;br&gt;
+					&lt;i&gt;pointer&lt;/i&gt; OCRAD.open()&lt;br&gt;
+					&lt;i&gt;int&lt;/i&gt; OCRAD.<span class="apidocCodeKeywordSpan">close</span>(&lt;i&gt;pointer&lt;/i&gt; descriptor
+)&lt;br&gt;
+					(and more!)
+					&lt;!-- OCRAD.get_errno&lt;br&gt;
+					OCRAD.set_image&lt;br&gt;
+					OCRAD.set_image_from_file&lt;br&gt;
+					OCRAD.set_utf8_format&lt;br&gt;
+					OCRAD.set_threshold&lt;br&gt;
+					OCRAD.scale&lt;br&gt;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ocrad.js.get_errno" id="apidoc.element.ocrad.js.get_errno">
+        function <span class="apidocSignatureSpan">ocrad.js.</span>get_errno
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get_errno = function () {
+  return ccallFunc(func, returnType, argTypes, Array.prototype.slice.call(arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ocrad.js.open" id="apidoc.element.ocrad.js.open">
+        function <span class="apidocSignatureSpan">ocrad.js.</span>open
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">open = function () {
+  return ccallFunc(func, returnType, argTypes, Array.prototype.slice.call(arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+			&lt;div class="content"&gt;
+				Ocrad.js also &lt;strong&gt;exposes all&lt;/strong&gt; of the &lt;a href="http://www.gnu.org/software/ocrad/manual
+/ocrad_manual.html#Library-functions"&gt;C library functions&lt;/a&gt; in addition to the extremely simple high level
+ API covered in the last section. By calling &lt;tt&gt;OCRAD.version()&lt;/tt&gt; you can find the current version string
+: &lt;tt&gt;0.23-pre1&lt;/tt&gt;, the latest pre-release version of the software available.
+
+				&lt;div style="padding: 20px; font-family: monospace"&gt;
+					&lt;i&gt;string&lt;/i&gt; OCRAD.version()&lt;br&gt;
+					&lt;i&gt;void&lt;/i&gt; OCRAD.write_file(&lt;i&gt;string&lt;/i&gt; filename, &lt;i&gt;Uint8Array&lt;/
+i&gt; PBM Image Data)&lt;br&gt;
+					&lt;i&gt;pointer&lt;/i&gt; OCRAD.<span class="apidocCodeKeywordSpan">open</span>()&lt;br&gt;
+					&lt;i&gt;int&lt;/i&gt; OCRAD.close(&lt;i&gt;pointer&lt;/i&gt; descriptor)&lt;br&gt;
+					(and more!)
+					&lt;!-- OCRAD.get_errno&lt;br&gt;
+					OCRAD.set_image&lt;br&gt;
+					OCRAD.set_image_from_file&lt;br&gt;
+					OCRAD.set_utf8_format&lt;br&gt;
+					OCRAD.set_threshold&lt;br&gt;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ocrad.js.recognize" id="apidoc.element.ocrad.js.recognize">
+        function <span class="apidocSignatureSpan">ocrad.js.</span>recognize
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">recognize = function () {
+  return ccallFunc(func, returnType, argTypes, Array.prototype.slice.call(arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  image = dst;
+}
+if(image instanceof ArrayBuffer) image = new Uint8Array(image);
+OCRAD.write_file('/in.pnm', image);
+var desc = OCRAD.open();
+OCRAD.set_image_from_file(desc, 'in.pnm', 0);
+OCRAD.set_utf8_format(desc, 1);
+OCRAD.<span class="apidocCodeKeywordSpan">recognize</span>(desc, 0)
+var text = '';
+var block_count = OCRAD.result_blocks(desc);
+
+for(var i = 0; i &lt; block_count; i++){
+  var line_count = OCRAD.result_lines(desc, i);
+  for(var j = 0; j &lt; line_count; j++){
+    var line = OCRAD.result_line(desc, i, j);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ocrad.js.result_blocks" id="apidoc.element.ocrad.js.result_blocks">
+        function <span class="apidocSignatureSpan">ocrad.js.</span>result_blocks
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">result_blocks = function () {
+  return ccallFunc(func, returnType, argTypes, Array.prototype.slice.call(arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if(image instanceof ArrayBuffer) image = new Uint8Array(image);
+OCRAD.write_file('/in.pnm', image);
+var desc = OCRAD.open();
+OCRAD.set_image_from_file(desc, 'in.pnm', 0);
+OCRAD.set_utf8_format(desc, 1);
+OCRAD.recognize(desc, 0)
+var text = '';
+var block_count = OCRAD.<span class="apidocCodeKeywordSpan">result_blocks</span>(desc);
+
+for(var i = 0; i &lt; block_count; i++){
+  var line_count = OCRAD.result_lines(desc, i);
+  for(var j = 0; j &lt; line_count; j++){
+    var line = OCRAD.result_line(desc, i, j);
+    text += line;
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ocrad.js.result_chars_block" id="apidoc.element.ocrad.js.result_chars_block">
+        function <span class="apidocSignatureSpan">ocrad.js.</span>result_chars_block
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">result_chars_block = function () {
+  return ccallFunc(func, returnType, argTypes, Array.prototype.slice.call(arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ocrad.js.result_chars_line" id="apidoc.element.ocrad.js.result_chars_line">
+        function <span class="apidocSignatureSpan">ocrad.js.</span>result_chars_line
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">result_chars_line = function () {
+  return ccallFunc(func, returnType, argTypes, Array.prototype.slice.call(arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ocrad.js.result_chars_total" id="apidoc.element.ocrad.js.result_chars_total">
+        function <span class="apidocSignatureSpan">ocrad.js.</span>result_chars_total
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">result_chars_total = function () {
+  return ccallFunc(func, returnType, argTypes, Array.prototype.slice.call(arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ocrad.js.result_first_character" id="apidoc.element.ocrad.js.result_first_character">
+        function <span class="apidocSignatureSpan">ocrad.js.</span>result_first_character
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">result_first_character = function () {
+  return ccallFunc(func, returnType, argTypes, Array.prototype.slice.call(arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ocrad.js.result_line" id="apidoc.element.ocrad.js.result_line">
+        function <span class="apidocSignatureSpan">ocrad.js.</span>result_line
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">result_line = function () {
+  return ccallFunc(func, returnType, argTypes, Array.prototype.slice.call(arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  OCRAD.recognize(desc, 0)
+  var text = '';
+  var block_count = OCRAD.result_blocks(desc);
+
+  for(var i = 0; i &lt; block_count; i++){
+    var line_count = OCRAD.result_lines(desc, i);
+    for(var j = 0; j &lt; line_count; j++){
+      var line = OCRAD.<span class="apidocCodeKeywordSpan">result_line</span>(desc, i, j);
+      text += line;
+    }
+  }
+  OCRAD.close(desc)
+  return text;
+}
+OCRAD.write_file = function(filename, arr){
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ocrad.js.result_lines" id="apidoc.element.ocrad.js.result_lines">
+        function <span class="apidocSignatureSpan">ocrad.js.</span>result_lines
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">result_lines = function () {
+  return ccallFunc(func, returnType, argTypes, Array.prototype.slice.call(arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+OCRAD.set_image_from_file(desc, 'in.pnm', 0);
+OCRAD.set_utf8_format(desc, 1);
+OCRAD.recognize(desc, 0)
+var text = '';
+var block_count = OCRAD.result_blocks(desc);
+
+for(var i = 0; i &lt; block_count; i++){
+  var line_count = OCRAD.<span class="apidocCodeKeywordSpan">result_lines</span>(desc, i);
+  for(var j = 0; j &lt; line_count; j++){
+    var line = OCRAD.result_line(desc, i, j);
+    text += line;
+  }
+}
+OCRAD.close(desc)
+return text;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ocrad.js.scale" id="apidoc.element.ocrad.js.scale">
+        function <span class="apidocSignatureSpan">ocrad.js.</span>scale
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">scale = function () {
+  return ccallFunc(func, returnType, argTypes, Array.prototype.slice.call(arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    if( verbosity &gt; 0 )
+      std::fprintf( stderr, "file '%s' totally cut away\n", infile_name );
+    return 1;
+    }
+  }
+
+page_image.transform( input_control.transformation );
+page_image.<span class="apidocCodeKeywordSpan">scale</span>( input_control.scale );
+page_image.threshold( input_control.threshold );
+if( verbosity &gt; 0 )
+  {
+  const Rational th( page_image.threshold(), page_image.maxval() );
+  std::fprintf( stderr, "maxval = %d, threshold = %d (%s)\n",
+                page_image.maxval(), page_image.threshold(),
+                th.to_decimal( 1, -3 ).c_str() );
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ocrad.js.set_exportfile" id="apidoc.element.ocrad.js.set_exportfile">
+        function <span class="apidocSignatureSpan">ocrad.js.</span>set_exportfile
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set_exportfile = function () {
+  return ccallFunc(func, returnType, argTypes, Array.prototype.slice.call(arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if(image instanceof ArrayBuffer) image = new Uint8Array(image);
+
+OCRAD.write_file('/in.pnm', image);
+
+var desc = OCRAD.open();
+OCRAD.set_image_from_file(desc, 'in.pnm', invert ? 1 : 0);
+if(raw){
+  OCRAD.<span class="apidocCodeKeywordSpan">set_exportfile</span>(desc, '-');
+  Module.print = raw;
+}
+OCRAD.set_utf8_format(desc, 1);
+OCRAD.recognize(desc, 0)
+
+var text = '';
+var block_count = OCRAD.result_blocks(desc);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ocrad.js.set_image" id="apidoc.element.ocrad.js.set_image">
+        function <span class="apidocSignatureSpan">ocrad.js.</span>set_image
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set_image = function () {
+  return ccallFunc(func, returnType, argTypes, Array.prototype.slice.call(arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ocrad.js.set_image_from_file" id="apidoc.element.ocrad.js.set_image_from_file">
+        function <span class="apidocSignatureSpan">ocrad.js.</span>set_image_from_file
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set_image_from_file = function () {
+  return ccallFunc(func, returnType, argTypes, Array.prototype.slice.call(arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    dst[j] = (src[i] * coeff_r + src[i+1] * coeff_g + src[i+2] * coeff_b + 8192) &gt;&gt; 14;
+  }
+  image = dst;
+}
+if(image instanceof ArrayBuffer) image = new Uint8Array(image);
+OCRAD.write_file('/in.pnm', image);
+var desc = OCRAD.open();
+OCRAD.<span class="apidocCodeKeywordSpan">set_image_from_file</span>(desc, 'in.pnm', 0);
+OCRAD.set_utf8_format(desc, 1);
+OCRAD.recognize(desc, 0)
+var text = '';
+var block_count = OCRAD.result_blocks(desc);
+
+for(var i = 0; i &lt; block_count; i++){
+  var line_count = OCRAD.result_lines(desc, i);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ocrad.js.set_threshold" id="apidoc.element.ocrad.js.set_threshold">
+        function <span class="apidocSignatureSpan">ocrad.js.</span>set_threshold
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set_threshold = function () {
+  return ccallFunc(func, returnType, argTypes, Array.prototype.slice.call(arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ocrad.js.set_utf8_format" id="apidoc.element.ocrad.js.set_utf8_format">
+        function <span class="apidocSignatureSpan">ocrad.js.</span>set_utf8_format
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">set_utf8_format = function () {
+  return ccallFunc(func, returnType, argTypes, Array.prototype.slice.call(arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+  image = dst;
+}
+if(image instanceof ArrayBuffer) image = new Uint8Array(image);
+OCRAD.write_file('/in.pnm', image);
+var desc = OCRAD.open();
+OCRAD.set_image_from_file(desc, 'in.pnm', 0);
+OCRAD.<span class="apidocCodeKeywordSpan">set_utf8_format</span>(desc, 1);
+OCRAD.recognize(desc, 0)
+var text = '';
+var block_count = OCRAD.result_blocks(desc);
+
+for(var i = 0; i &lt; block_count; i++){
+  var line_count = OCRAD.result_lines(desc, i);
+  for(var j = 0; j &lt; line_count; j++){
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ocrad.js.version" id="apidoc.element.ocrad.js.version">
+        function <span class="apidocSignatureSpan">ocrad.js.</span>version
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">version = function () {
+  return ccallFunc(func, returnType, argTypes, Array.prototype.slice.call(arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+					var string = OCRAD(image);&lt;br&gt;
+					alert(string);
+				&lt;/div&gt;
+				The &lt;tt&gt;image&lt;/tt&gt; argument can be a canvas element, a Context2D instance, or an instance of ImageData.
+			&lt;/div&gt;
+
+			&lt;div class="content"&gt;
+				Ocrad.js also &lt;strong&gt;exposes all&lt;/strong&gt; of the &lt;a href="http://www.gnu.org/software/ocrad/manual
+/ocrad_manual.html#Library-functions"&gt;C library functions&lt;/a&gt; in addition to the extremely simple high level
+ API covered in the last section. By calling &lt;tt&gt;OCRAD.<span class="apidocCodeKeywordSpan">version</span>()&lt;/tt&amp;#
+x3e; you can find the current version string: &lt;tt&gt;0.23-pre1&lt;/tt&gt;, the latest pre-release version of the software
+ available.
+
+				&lt;div style="padding: 20px; font-family: monospace"&gt;
+					&lt;i&gt;string&lt;/i&gt; OCRAD.version()&lt;br&gt;
+					&lt;i&gt;void&lt;/i&gt; OCRAD.write_file(&lt;i&gt;string&lt;/i&gt; filename, &lt;i&gt;Uint8Array&lt;/
+i&gt; PBM Image Data)&lt;br&gt;
+					&lt;i&gt;pointer&lt;/i&gt; OCRAD.open()&lt;br&gt;
+					&lt;i&gt;int&lt;/i&gt; OCRAD.close(&lt;i&gt;pointer&lt;/i&gt; descriptor)&lt;br&gt;
+					(and more!)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ocrad.js.write_file" id="apidoc.element.ocrad.js.write_file">
+        function <span class="apidocSignatureSpan">ocrad.js.</span>write_file
+        <span class="apidocSignatureSpan">(filename, arr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">write_file = function (filename, arr){
+  FS.writeFile(filename, arr, {encoding: 'binary'});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			&lt;/div&gt;
+
+			&lt;div class="content"&gt;
+				Ocrad.js also &lt;strong&gt;exposes all&lt;/strong&gt; of the &lt;a href="http://www.gnu.org/software/ocrad/manual
+/ocrad_manual.html#Library-functions"&gt;C library functions&lt;/a&gt; in addition to the extremely simple high level
+ API covered in the last section. By calling &lt;tt&gt;OCRAD.version()&lt;/tt&gt; you can find the current version string
+: &lt;tt&gt;0.23-pre1&lt;/tt&gt;, the latest pre-release version of the software available.
+
+				&lt;div style="padding: 20px; font-family: monospace"&gt;
+					&lt;i&gt;string&lt;/i&gt; OCRAD.version()&lt;br&gt;
+					&lt;i&gt;void&lt;/i&gt; OCRAD.<span class="apidocCodeKeywordSpan">write_file</span>(&lt;i&gt;string&lt;/i&gt;
+; filename, &lt;i&gt;Uint8Array&lt;/i&gt; PBM Image Data)&lt;br&gt;
+					&lt;i&gt;pointer&lt;/i&gt; OCRAD.open()&lt;br&gt;
+					&lt;i&gt;int&lt;/i&gt; OCRAD.close(&lt;i&gt;pointer&lt;/i&gt; descriptor)&lt;br&gt;
+					(and more!)
+					&lt;!-- OCRAD.get_errno&lt;br&gt;
+					OCRAD.set_image&lt;br&gt;
+					OCRAD.set_image_from_file&lt;br&gt;
+					OCRAD.set_utf8_format&lt;br&gt;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
